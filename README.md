@@ -9,6 +9,15 @@ Para o gerador de senhas eu utilizei a biblioteca random e seus módulos join e 
 
 Exemplo
    ````py
+upper_words = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+lower_words = "abcdefghijklmnopqrstuvwxyz"
+numbers = "0123456789"
+symbols = "@#$%&*[()"
+
+password_chars = int(input("How many characters will your password have:"))
+
+password = upper_words + lower_words + numbers + symbols
+
 def generator(password):
   password = "".join(random.sample(password, password_chars))
   print(password)
